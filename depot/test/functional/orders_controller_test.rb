@@ -1,3 +1,5 @@
+# coding: UTF-8
+
 require 'test_helper'
 
 class OrdersControllerTest < ActionController::TestCase
@@ -14,14 +16,14 @@ class OrdersControllerTest < ActionController::TestCase
    test "requires item in cart" do
       get :new
       assert_redirected_to store_path
-      assert_equal 'カートは空です', flash[:notice]
+      assert_equal 'カートは空です。', flash[:notice]
    end
 
    test "should get new" do
       cart = Cart.create
       LineItem.create(cart: cart, product: products(:ruby))
 
-      get :new, {}, {cart_id: card.id}
+      get :new, {}, {cart_id: cart.id}
       assert_response :success
    end
 
