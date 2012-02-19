@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class ApplicationController < ActionController::Base
    before_filter :authorize
 
