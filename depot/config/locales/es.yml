@@ -7,3 +7,8 @@ es:
       news:         "Noticias"
       contact:      "Contacto"
 
+  store:
+    index:
+      title_html:  "Su Cat&aacute;logo de Pragmatic"
+      add_html:    "A&ntilde;adir al Carrito"
+
